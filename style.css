@@ -465,6 +465,36 @@ button:hover, .btn:hover {
   background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
 }
 
+/* Parallax background effect */
+.parallax-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  will-change: transform;
+  transition: opacity 0.5s;
+}
+
+.has-parallax {
+  background: transparent !important;
+}
+
+.parallax-bg::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.15);
+  pointer-events: none;
+}
+
+
 /* Footer */
 footer {
   text-align: center;
