@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom Glassmorphism & Gradient Styles -->
     <link rel="stylesheet" href="style.css">
+    <!-- LottieFiles for SVG animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- GSAP for entrance animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Custom Animations -->
+    <script defer src="animations.js"></script>
 
 </head>
 <body>
@@ -100,7 +106,9 @@
                 </ul>
             </div>
             
-            <div class="img-placeholder">Clinical Results Visualization</div>
+            <div class="img-placeholder" style="height:220px; background:rgba(255,255,255,0.25); box-shadow:0 2px 24px #43cea244;">
+                <div id="clinical-lottie" style="width:200px;height:200px;margin:auto;"></div>
+            </div>
         </section>
         
         <section>
@@ -121,7 +129,9 @@
                 </ul>
             </div>
             
-            <div class="img-placeholder">Financial Projection Graph</div>
+            <div class="img-placeholder" style="height:220px; background:rgba(255,255,255,0.25); box-shadow:0 2px 24px #43cea244;">
+                <div id="growth-lottie" style="width:200px;height:200px;margin:auto;"></div>
+            </div>
         </section>
         
         <section>
