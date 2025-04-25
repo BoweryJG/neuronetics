@@ -1,0 +1,192 @@
+/* Award-winning, distinct, modern style for v2.html */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', Arial, sans-serif;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #f5f6fa;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.header-banner {
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  position: relative;
+  background: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+  color: #232526;
+  text-align: center;
+  padding: 3.5rem 0 2rem 0;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  box-shadow: 0 12px 48px #8EC5FC33;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 2;
+  animation: fadeInDown 1.3s cubic-bezier(.23,1,.32,1);
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: -2rem auto 3rem auto;
+  background: rgba(36,37,38,0.70);
+  border-radius: 32px;
+  box-shadow: 0 8px 48px #E0C3FC22;
+  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1.3s cubic-bezier(.23,1,.32,1);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+  color: #8EC5FC;
+  background: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+h2 {
+  margin-top: 44px;
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-top: 28px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+ul, li {
+  font-size: 1.08rem;
+  margin-bottom: 0.7rem;
+  color: #f5f6fa;
+  padding-left: 0;
+  list-style: none;
+  position: relative;
+}
+li:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8EC5FC 0%, #E0C3FC 100%);
+  vertical-align: middle;
+}
+
+.info-box {
+  background: linear-gradient(120deg, #232526 80%, #8EC5FC33 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px #8EC5FC33;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  margin-bottom: 2.2rem;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1.2s cubic-bezier(.23,1,.32,1);
+  transition: box-shadow 0.4s, background 0.4s;
+}
+.info-box:hover {
+  box-shadow: 0 8px 48px #E0C3FC77;
+  background: linear-gradient(120deg, #232526 60%, #E0C3FC 100%);
+}
+
+.right-image {
+  float: right;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  width: 320px;
+  max-width: 45vw;
+  animation: floatIn 1.7s cubic-bezier(.23,1,.32,1);
+}
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateX(70px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.gradient-divider {
+  height: 5px;
+  width: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+  margin: 2.5rem 0 2rem 0;
+  animation: shimmer 2.5s infinite linear;
+}
+@keyframes shimmer {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+
+.animated-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2.5rem 0;
+}
+.animated-graphic svg {
+  width: 220px;
+  height: 110px;
+  animation: pulseGlow 2.5s infinite alternate cubic-bezier(.4,0,.2,1);
+}
+@keyframes pulseGlow {
+  0% { filter: drop-shadow(0 0 0 #E0C3FC); }
+  100% { filter: drop-shadow(0 0 16px #E0C3FC); }
+}
+
+blockquote {
+  border-left: 4px solid #E0C3FC;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: #E0C3FC;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  background: rgba(36,37,38,0.28);
+  border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 1.2rem 0.5rem;
+  }
+  .header-banner {
+    font-size: 1.5rem;
+    padding: 2rem 0 1rem 0;
+  }
+  .right-image {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+    max-width: 100vw;
+  }
+}
