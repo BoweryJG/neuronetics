@@ -1,0 +1,47 @@
+/* Glassmorphism Footer Enhancement */
+.footer-glass {
+  background: rgba(255,255,255,0.35);
+  box-shadow: 0 4px 24px rgba(24,90,157,0.13);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 32px 0 16px 0;
+  margin: 0 auto 32px auto;
+  max-width: 700px;
+}
+
+.logo-text {
+  font-family: 'Lato', 'Inter', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #185a9d;
+  margin-bottom: 0;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #43cea2;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-glass a {
+  transition: color 0.2s;
+}
+
+.footer-glass a:hover {
+  color: #185a9d;
+}
+
+@media (max-width: 600px) {
+  .footer-glass {
+    padding: 18px 0 10px 0;
+    max-width: 98vw;
+  }
+  .logo-text {
+    font-size: 1.3rem;
+  }
+  .tagline {
+    font-size: 0.98rem;
+  }
+}
