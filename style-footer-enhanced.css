@@ -38,6 +38,31 @@
     padding: 18px 0 10px 0;
     max-width: 98vw;
   }
+}
+
+.enhanced-highlight {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #43cea244, 0 1.5px 6px #185a9d22;
+  padding: 28px 0;
+  margin: 24px auto 32px auto;
+  max-width: 680px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #185a9d;
+  text-align: center;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(2px);
+  border: 1.5px solid #a1c4fd44;
+}
+
+@media (max-width: 700px) {
+  .enhanced-highlight {
+    font-size: 1.05rem;
+    padding: 18px 0;
+    max-width: 98vw;
+  }
+}
   .logo-text {
     font-size: 1.3rem;
   }
