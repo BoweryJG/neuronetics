@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroStar Advanced Therapy: Impact Analysis for Dr. Sonali Bora</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D5DA1;
+            margin-bottom: 0.8em;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            border-bottom: 2px solid #e9f0f9;
+            padding-bottom: 10px;
+            margin-top: 2em;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5em;
+        }
+        
+        p {
+            margin-bottom: 1em;
+        }
+        
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 2em;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-right {
+            text-align: right;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .caption {
+            font-size: 0.8em;
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5em;
+        }
+        
+        .page-break {
+            page-break-after: always;
+            margin-bottom: 50px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .shadow {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Specific Components */
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f5f9ff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            color: #555;
+            font-size: 1.3rem;
+            font-weight: normal;
+            margin: 0 0 20px 0;
+        }
+        
+        .confidential {
+            font-weight: bold;
+            margin: 30px 0 5px 0;
+        }
+        
+        .date {
+            color: #666;
+        }
+        
+        .right-image {
+            float: right;
+            margin: 0 0 20px 20px;
+            width: 35%;
+        }
+        
+        .info-box {
+            background-color: #f5f9ff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .case-examples {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .case {
+            width: 31%;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .case-title {
+            color: #2D5DA1;
+            margin-top: 0;
+            border-bottom: 2px solid #2D5DA1;
+            padding-bottom: 5px;
+        }
+        
+        .outcomes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .outcome {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        
+        .outcome-number {
+            background-color: #2D5DA1;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .timeline {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-container {
+            flex: 1;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #2D5DA1;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background-color: #2D5DA1;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-content-left {
+            margin-right: 50%;
+            padding-right: 30px;
+            text-align: right;
+        }
+        
+        .timeline-content-right {
+            margin-left: 50%;
+            padding-left: 30px;
+        }
+        
+        .timeline-month {
+            color: #2D5DA1;
+            margin: 0 0 5px 0;
+        }
+        
+        .success-factors {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .factor {
+            background-color: #f5f9ff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .factor-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .factor-number {
+            background-color: #2D5DA1;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .factor-title {
+            color: #2D5DA1;
+            margin: 0;
+        }
+        
+        .factor-description {
+            margin: 0;
+        }
+        
+        .hero-image-container {
+            position: relative;
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero-image {
+            width: 100%;
+            filter: brightness(0.85);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 8px;
+            width: 80%;
+        }
+        
+        .hero-title {
+            margin-top: 0;
+            color: white;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 0;
+        }
+        
+        .cta {
+            background-color: #2D5DA1;
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            margin-top: 0;
+            color: white;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.2em;
+        }
+        
+        .cta-contact {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        
+        .consider {
+            font-style: italic;
+            margin: 1.5em 0;
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #2D5DA1;
+            border-radius: 4px;
+        }
+        
+        .competitive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        
+        .competitive-table th,
+        .competitive-table td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .competitive-table th {
+            background-color: #f5f5f5;
+        }
+        
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .case-examples {
+                flex-direction: column;
+            }
+            
+            .case {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            
+            .right-image {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            
+            .success-factors {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-content-left,
+            .timeline-content-right {
+                margin: 0 0 0 30px;
+                padding: 0;
+                text-align: left;
+            }
+            
+            .timeline-line {
+                left: 12px;
+            }
+            
+            .timeline-dot {
+                left: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cover Page -->
+        <header class="header">
+            <img src="https://www.neurostar.com/wp-content/uploads/2021/02/NeuroStar_Logo_Registered.png" alt="NeuroStar Logo" class="logo">
+            
+            <h1>TRANSFORMATIVE CARE IMPACT ANALYSIS</h1>
+            <p class="subtitle">Advanced Depression Solutions for Integrated Psychiatric Services</p>
+            
+            <p class="confidential">CONFIDENTIAL: Prepared exclusively for Dr. Sonali Bora</p>
+            <p class="date">May 2025</p>
+        </header>
+        
+        <div class="page-break"></div>
+        
+        <!-- Executive Summary -->
+        <section>
+            <h2>EXECUTIVE SUMMARY</h2>
+            
+            <div class="right-image">
+                <img src="https://i.ibb.co/G9xSKFP/neurostar-treatment.jpg" alt="NeuroStar TMS Treatment" class="shadow">
+                <p class="caption">NeuroStar TMS: Non-invasive, targeted depression treatment</p>
+            </div>
+            
+            <p>Dr. Bora, your commitment to helping patients "achieve happiness and healing" through integrated mind-body care has established your practice as a respected provider in Alpharetta. This assessment explores how expanding your treatment options for depression can significantly enhance your ability to fulfill this mission, particularly for those patients who haven't found relief through traditional approaches.</p>
+            
+            <h3>Key Observations:</h3>
+            
+            <ul>
+                <li>Despite your comprehensive approach to depression treatment including psychotherapy referrals, medication management, and Spravato, approximately two-thirds of patients with depression don't achieve remission with antidepressants alone</li>
+                <li>The Alpharetta area shows strong demand for advanced depression treatments, with multiple competitors already offering various forms of TMS</li>
+                <li>Your unique expertise in treating adolescents positions you to leverage NeuroStar's recent FDA indication for this underserved population</li>
+                <li>Patient reviews suggest mixed satisfaction; adding a treatment with 62% remission rates could significantly improve outcomes and patient perception</li>
+            </ul>
+            
+            <p class="consider">Consider: What would it mean for your patients who remain depressed after multiple medication trials to have access to a non-drug, non-invasive option with proven effectiveness?</p>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- Practice Assessment -->
+        <section>
+            <h2>PRACTICE ASSESSMENT: STRENGTHS & OPPORTUNITIES</h2>
+            
+            <h3>Current Practice Strengths</h3>
+            
+            <div class="right-image">
+                <div class="info-box">
+                    <h4>PRACTICE HIGHLIGHTS</h4>
+                    <ul>
+                        <li>Board-certified in child, adolescent, and adult psychiatry</li>
+                        <li>Academic affiliations with Emory University</li>
+                        <li>Comprehensive services including Spravato for TRD</li>
+                        <li>Integrated mind-body treatment philosophy</li>
+                        <li>Multi-provider practice serving wide age range</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>Your practice stands out through several distinctive qualities:</p>
+            
+            <ul>
+                <li><strong>Comprehensive Services:</strong> You provide care across the life spectrum (child, adolescent, and adult)</li>
+                <li><strong>Innovative Treatment Approach:</strong> Your adoption of Spravato demonstrates commitment to evidence-based advances</li>
+                <li><strong>Academic Credentials:</strong> Your affiliations with Emory University and Children's Healthcare of Atlanta establish your authority in the field</li>
+                <li><strong>Mind-Body Philosophy:</strong> Your holistic approach resonates with patients seeking integrated care</li>
+            </ul>
+            
+            <h3>Strategic Opportunity Analysis</h3>
+            
+            <p>While reviewing your current depression care pathway, several questions emerge:</p>
+            
+            <ul>
+                <li>What options currently exist for patients who don't respond to or cannot tolerate medications?</li>
+                <li>How many patients might be referred elsewhere for TMS therapy that could be treated in your practice?</li>
+                <li>What percentage of your patients with depression achieve full remission with current treatment options?</li>
+            </ul>
+            
+            <p>The addition of NeuroStar TMS appears strategically aligned with your practice philosophy and would address a significant treatment gap, particularly for:</p>
+            
+            <ol>
+                <li><strong>Medication-Resistant Patients:</strong> Those who have failed multiple medication trials</li>
+                <li><strong>Adolescent Patients:</strong> Your specialty population now eligible for TMS (ages 15-21)</li>
+                <li><strong>Patients Seeking Non-Medication Options:</strong> Those concerned about side effects or medication interactions</li>
+            </ol>
+            
+            <p class="consider">Consider: How would having a complete continuum of depression care—from medication to Spravato to TMS—position your practice in the minds of patients and referring physicians?</p>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- Patient-Centered Impact Analysis -->
+        <section>
+            <h2>PATIENT-CENTERED IMPACT ANALYSIS</h2>
+            
+            <h3>Transforming Patient Journeys</h3>
+            
+            <p>The most compelling reason to consider NeuroStar is its potential impact on patient lives. Imagine the following scenarios:</p>
+            
+            <div class="case-examples">
+                <div class="case">
+                    <h4 class="case-title">CASE EXAMPLE 1</h4>
+                    <p><strong>Adult with Treatment-Resistant Depression</strong></p>
+                    <p>A 42-year-old professional who has tried three antidepressants with limited benefit and troubling side effects. Currently functioning but still experiencing significant symptoms that affect work performance and family relationships. With NeuroStar, this patient has a 62% chance of achieving remission and returning to full functioning.</p>
+                </div>
+                
+                <div class="case">
+                    <h4 class="case-title">CASE EXAMPLE 2</h4>
+                    <p><strong>Adolescent with Depression</strong></p>
+                    <p>A 17-year-old high school student struggling with depression despite therapy and medication. Parents are hesitant about increasing medication dosage or adding more medications. NeuroStar offers a non-drug alternative specifically indicated for this age group, potentially changing the trajectory of this young person's academic and social development.</p>
+                </div>
+                
+                <div class="case">
+                    <h4 class="case-title">CASE EXAMPLE 3</h4>
+                    <p><strong>Patient Unsuitable for Spravato</strong></p>
+                    <p>A 56-year-old with treatment-resistant depression and uncontrolled hypertension who is not a candidate for Spravato. Currently, this patient has limited options in your practice. NeuroStar would provide an effective alternative without cardiovascular risks.</p>
+                </div>
+            </div>
+            
+            <h3>Quantifiable Outcomes</h3>
+            
+            <div class="info-box">
+                <div class="outcomes">
+                    <div class="outcome">
+                        <div class="outcome-number">83%</div>
+                        <div>
+                            <h4 style="margin: 0;">Clinical Response Rate</h4>
+                            <p style="margin: 0;">of patients experience measurable improvement with NeuroStar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="outcome">
+                        <div class="outcome-number">62%</div>
+                        <div>
+                            <h4 style="margin: 0;">Full Remission Rate</h4>
+                            <p style="margin: 0;">of patients achieve remission after a full course of treatment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="outcome">
+                        <div class="outcome-number">6</div>
+                        <div>
+                            <h4 style="margin: 0;">Weeks to Results</h4>
+                            <p style="margin: 0;">Significant improvements in functional capacity and daily activities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="consider">Consider: What difference would it make to your practice satisfaction if 6 out of 10 of your most challenging depression cases achieved remission?</p>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- Practice Growth & Competitive Positioning -->
+        <section>
+            <h2>PRACTICE GROWTH & COMPETITIVE POSITIONING</h2>
+            
+            <h3>Market Differentiation</h3>
+            
+            <div class="right-image">
+                <div class="info-box">
+                    <h4>ALPHARETTA COMPETITIVE LANDSCAPE</h4>
+                    <table class="competitive-table">
+                        <tr>
+                            <th>Provider</th>
+                            <th>TMS Offered</th>
+                        </tr>
+                        <tr>
+                            <td>Serenity Mental Health</td>
+                            <td>Yes (Standard rTMS)</td>
+                        </tr>
+                        <tr>
+                            <td>Breakthru Psychiatric</td>
+                            <td>Yes (iTBS)</td>
+                        </tr>
+                        <tr>
+                            <td>Empower Psychiatry</td>
+                            <td>Yes (BrainsWay)</td>
+                        </tr>
+                        <tr>
+                            <td>CNSL</td>
+                            <td>Yes (MagVenture)</td>
+                        </tr>
+                        <tr>
+                            <td>Geode Health</td>
+                            <td>Yes (Standard rTMS)</td>
+                        </tr>
+                        <tr>
+                            <td>Psych Atlanta</td>
+                            <td>Yes (NeuroStar)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <p>The Alpharetta area has several providers offering various forms of TMS therapy, indicating market demand for this treatment. By adding NeuroStar, you would:</p>
+            
+            <ol>
+                <li><strong>Complete Your Depression Care Spectrum:</strong> Offering the full range from medication to advanced interventions</li>
+                <li><strong>Establish a Unique Niche:</strong> Becoming one of few providers offering TMS for adolescents</li>
+                <li><strong>Build on Existing Innovation:</strong> Complementing your Spravato offering with another cutting-edge treatment</li>
+                <li><strong>Address Competitive Pressure:</strong> Retain patients who might otherwise seek TMS elsewhere</li>
+            </ol>
+            
+            <h3>Growth Potential</h3>
+            
+            <p>Adding NeuroStar creates several avenues for practice expansion:</p>
+            
+            <ul>
+                <li><strong>New Patient Acquisition:</strong> Those specifically seeking TMS treatment</li>
+                <li><strong>Reduced Referrals Out:</strong> Keeping TRD patients within your practice</li>
+                <li><strong>Enhanced Reputation:</strong> Reinforcing your image as a progressive, comprehensive provider</li>
+                <li><strong>Marketing Opportunities:</strong> Positioning yourself as an adolescent depression specialist with advanced treatment options</li>
+            </ul>
+            
+            <p class="consider">Consider: How might your practice's standing in the community evolve when you become known for transformative outcomes in treatment-resistant depression cases?</p>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- Implementation Roadmap -->
+        <section>
+            <h2>IMPLEMENTATION ROADMAP: PATHWAY TO SUCCESS</h2>
+            
+            <p>Integrating NeuroStar effectively requires thoughtful planning but can be accomplished smoothly with proper support. A potential timeline might include:</p>
+            
+            <div class="timeline">
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-left">
+                            <h4 class="timeline-month">MAY 2025</h4>
+                            <div class="info-box" style="margin-top: 0;">
+                                <ul>
+                                    <li>Technology demonstration and staff education</li>
+                                    <li>Space assessment and treatment room planning</li>
+                                    <li>Initial patient identification and education</li>
+                                    <li>Insurance verification processes established</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-right">
+                            <h4 class="timeline-month">JUNE 2025</h4>
+                            <div class="info-box" style="margin-top: 0;">
+                                <ul>
+                                    <li>First patients begin treatment courses</li>
+                                    <li>Staff completes hands-on training with support</li>
+                                    <li>Patient testimonial collection begins</li>
+                                    <li>Referral network outreach initiated</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-left">
+                            <h4 class="timeline-month">JULY 2025</h4>
+                            <div class="info-box" style="margin-top: 0;">
+                                <ul>
+                                    <li>Treatment volume reaches sustainable levels</li>
+                                    <li>Outcomes monitoring system implemented</li>
+                                    <li>Marketing materials updated with patient success stories</li>
+                                    <li>Staff proficiency reached with all protocols</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content-right">
+                            <h4 class="timeline-month">AUGUST 2025</h4>
+                            <div class="info-box" style="margin-top: 0;">
+                                <ul>
+                                    <li>Potential expansion of treatment hours based on demand</li>
+                                    <li>First complete treatment courses finished with data collection</li>
+                                    <li>Refinement of patient selection and treatment protocols</li>
+                                    <li>Celebration of initial success stories</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Key Success Factors</h3>
+            
+            <p>Based on experiences of similar practices, several elements will be critical to successful implementation:</p>
+            
+            <div class="success-factors">
+                <div class="factor">
+                    <div class="factor-header">
+                        <div class="factor-number">1</div>
+                        <h4 class="factor-title">Patient Selection</h4>
+                    </div>
+                    <p class="factor-description">Identifying appropriate candidates who will benefit most from NeuroStar therapy is critical to achieving optimal outcomes. We'll provide criteria and assessment tools to help identify ideal patients.</p>
+                </div>
+                
+                <div class="factor">
+                    <div class="factor-header">
+                        <div class="factor-number">2</div>
+                        <h4 class="factor-title">Staff Engagement</h4>
+                    </div>
+                    <p class="factor-description">Ensuring your team understands and can communicate the value of TMS therapy is essential for patient adoption. We provide comprehensive training for all staff members involved in patient care.</p>
+                </div>
+                
+                <div class="factor">
+                    <div class="factor-header">
+                        <div class="factor-number">3</div>
+                        <h4 class="factor-title">Workflow Integration</h4>
+                    </div>
+                    <p class="factor-description">Designing efficient processes that don't disrupt existing care pathways ensures smooth implementation. Our team will help customize workflows specific to your practice needs.</p>
+                </div>
+                
+                <div class="factor">
+                    <div class="factor-header">
+                        <div class="factor-number">4</div>
+                        <h4 class="factor-title">Outcome Measurement</h4>
+                    </div>
+                    <p class="factor-description">Tracking and celebrating patient improvements reinforces the value of TMS therapy. We provide tools to monitor progress and document successful outcomes for your practice.</p>
+                </div>
+            </div>
+            
+            <p class="consider">Consider: What would it mean for your practice if, by this time next year, you had dozens of success stories from patients who had found relief through NeuroStar when nothing else worked?</p>
+        </section>
+        
+        <div class="page-break"></div>
+        
+        <!-- Conclusion -->
+        <section>
+            <h2>CONCLUSION: REALIZING YOUR VISION</h2>
+            
+            <div class="hero-image-container">
+                <img src="https://i.ibb.co/DM9vFkL/patient-hope.jpg" alt="Patient Hope" class="hero-image">
+                <div class="hero-overlay">
+                    <h2 class="hero-title">Bringing Hope Where It's Needed Most</h2>
+                    <p class="hero-subtitle">For every patient who hasn't found relief, NeuroStar offers a new beginning</p>
+                </div>
+            </div>
+            
+            <p>Dr. Bora, your commitment to helping patients achieve happiness and healing is evident in how you've built your practice. The question before you is not simply about adding technology, but about expanding your ability to fulfill this mission for more patients.</p>
+            
+            <p>The patients who would benefit most from NeuroStar are already in your waiting room. They're the ones who haven't fully responded to medications, who struggle with side effects, who continue to experience depression despite your best efforts with current tools.</p>
+            
+            <p>What might it mean for them—and for you—if you could offer them a proven path to remission? What satisfaction might you experience in seeing patients who had lost hope find their way back to health and happiness?</p>
+            
+            <p>As you consider the next evolution of your practice, we're available to address any questions and provide whatever support you need to make an informed decision. The opportunity to transform lives through advanced depression care is within reach.</p>
+            
+            <div class="cta">
+                <h2 class="cta-title">Ready to take the next step?</h2>
+                <p class="cta-subtitle">Schedule your personalized NeuroStar consultation and demonstration today.</p>
+                <p class="cta-contact">Contact: (800) 257-8367 | neurostar.com</p>
+            </div>
+            
+            <div class="footer">
+                <p>This impact assessment was prepared based on practice information, regional market analysis, and published outcomes data for NeuroStar TMS Therapy. All patient scenarios are hypothetical but based on typical clinical presentations.</p>
+                <p>&copy; 2025 Neuronetics, Inc. All rights reserved. NeuroStar® is a registered trademark of Neuronetics, Inc.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
