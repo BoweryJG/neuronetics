@@ -1,12 +1,14 @@
 import React from 'react';
-import DepressionDashboard from './components/DepressionDashboard';
 
-function App() {
+function DepressionDashboard() {
   return (
-    <div className="App">
-      <DepressionDashboard />
+    <div className="depression-dashboard">
+      <h1>Depression Dashboard</h1>
+      {/* Add your dashboard content here */}
+      <p>This is where your dashboard data and visualizations will go.</p>
+      {/* For example, you might have charts, key metrics, etc. */}
     </div>
   );
 }
 
-export default App;
+export default DepressionDashboard;
