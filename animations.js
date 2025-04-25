@@ -26,13 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
       autoplay: true,
       path: 'https://assets10.lottiefiles.com/packages/lf20_2ks3pjua.json' // Example: brain scan animation
     });
-    // Financial Growth Visualization
-    lottie.loadAnimation({
-      container: document.getElementById('growth-lottie'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'https://assets10.lottiefiles.com/packages/lf20_6z2ulqxt.json' // Example: upward graph
-    });
+
   }
 });
